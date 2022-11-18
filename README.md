@@ -2,7 +2,12 @@
 
 Creacion de tablas, insercion de tabla alumno y salon
 
-### Primero para poder correr el proyecto crear un entorno virtual
+### Primero crear la base de datos en mysql
+- Archivo: 'mybd.sql'
+
+### Descargamos este repositorio
+
+### Luego dentro del repositorio creamos un entorno virtual en vscode
 - virtualenv -p python3 env
 
 #### Luego entramos al entorno
