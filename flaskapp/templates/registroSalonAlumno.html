@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+</head>
+<body>
+
+    <form action="" method="post" novalidate>
+
+        <h1>Campos de Salon</h1>
+        {{ formS.hidden_tag() }}
+        <p>
+            {{ formS.aula.label }}<br/>
+            {{ formS.aula(size = 32) }}
+            {% for error in formS.aula.errors %}
+                <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ formS.horaEntrada.label }}<br/>
+            {{ formS.horaEntrada(size = 32) }}
+            {% for error in formS.horaEntrada.errors %}
+                <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+    <h1>Campos de Alumno</h1>
+        {{ formA.hidden_tag() }}
+        <p>
+            {{ formA.id.label }}<br/>
+            {{ formA.id(size = 32) }}
+            {% for error in formA.id.errors %}
+                <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ formA.nombre.label }}<br/>
+            {{ formA.nombre(size = 32) }}
+            {% for error in formA.nombre.errors %}
+                <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ formA.apellido.label }}<br/>
+            {{ formA.apellido(size = 32) }}
+            {% for error in formA.apellido.errors %}
+                <span style="color: red">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ formS.submit() }}
+        </p>
+
+    </form>
+    
+</body>
+</html>
+
+{% endblock  %}

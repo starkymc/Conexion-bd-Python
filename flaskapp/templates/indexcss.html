@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index CSS</title>
+</head>
+<body>
+    <div>
+        Pagina Principal
+        <a href="{{ url_for('login') }}">Login</a>
+    </div>
+    <h1>Separador</h1>
+  {% with messages = get_flashed_messages() %}
+    <ul>
+      {% for message in messages %}
+        <li>{{message}}</li>
+      {% endfor %}
+    </ul>
+  {% endwith %}
+</body>
+</html>
+
+
+{% endblock  %}
